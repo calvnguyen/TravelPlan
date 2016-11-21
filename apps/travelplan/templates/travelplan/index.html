@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+      <meta charset="UTF-8">
+      <title>Login and Registration</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'travelplan/css/travelplan.css' %}"media="screen" title="no title"  charset="utf-8">
+
+  </head>
+  <body>
+    <div id="top-section">
+      <h1 id="header-text">Login and Registration - Travel Plan</h1>
+    </div>
+    <div id="form-container">
+      
+      <form id="registration-form" action='/register' method='post'>
+        {% csrf_token %}
+
+        <label class="form-label">
+          Name: <input id="name-text" type="text" name="name" placeholder="enter your name">
+        </label>
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'name-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+
+        <label class="form-label">
+          Username: <input id="name-text" type="text" name="username" placeholder="enter your username">
+        </label>
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'login-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+       
+        <label class="form-label">
+          Password: <input id="name-text" type="password" name="password" placeholder="enter your passsword">
+        </label>
+        <p id="small-text">(Password has to be at least 8 characters)
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'password-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+       
+        <label class="form-label">
+          Confirm Password: <input id="name-text" type="password" name="passwordconfirm" placeholder="confirm your password">
+        </label>
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'password-confirm-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+  
+        <input id="submit-button" type="submit" value="Submit">
+        <a id="user-exist" href="/login">Already has account? Click to Login</a>
+
+      </form>
+
+    </div>
+
+
+	</body>
+</html>

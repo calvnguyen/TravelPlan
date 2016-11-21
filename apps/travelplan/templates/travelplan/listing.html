@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+      <meta charset="UTF-8">
+      <title>Travel Dashboard</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'travelplan/css/travelplan.css' %}"media="screen" title="no title"  charset="utf-8">
+
+  </head>
+  <body>
+    <h1 id="header-text">My Travel Plan - Welcome!</h1>
+    <div id="result-container">
+      {% if request.session.status == 'logged' %}      
+       <h3 id="div-header">Hello, Welcome Back <span id="result-text"> {{ user_account.name }}</span>!!!</h3>
+      {% elif request.session.status == 'registered' %}
+         <h3 id="div-header">Registered successfully as <span id="result-text"> {{ user_account.name }}</span>!!!</h3>
+      {% endif %}
+
+      <form action='/logout'>
+        <input id="submit-button" type="submit" value="Logout">
+      </form>
+        {% if messages %}
+          <ul class="validation-error">
+          {% for message in messages %}
+           <li{% if message.tags %} 
+              class="{{ message.tags }}"
+              {% endif %} id="validation-text">
+            {{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+
+      <h3 id="div-header">Your Trip Schedules:</h3>
+      <table id="wish-table">
+        <thead>
+          <tr>
+            <th class="table-heading">Destination</th>
+            <th class="table-heading">Travel Start Date</th>
+            <th class="table-heading">Travel End Date</th>
+            <th class="table-heading">Plan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          {% for trip in user_trip_listing %}
+            <td class="table-data"><a href="/travels/destination/{{ trip.id }}">{{ trip.destination }}</a></td>
+            <td class="table-data">{{ trip.travel_from }}</td>
+            <td class="table-data">{{ trip.travel_to }}</td>
+            <td class="table-data">{{ trip.description }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h3 id="div-header">Other Users' Travel Plans:</h3>
+      <table id="wish-table">
+        <thead>
+          <tr>
+            <th class="table-heading">Name</th>
+            <th class="table-heading">Destination</th>
+            <th class="table-heading">Travel Start Date</th>
+            <th class="table-heading">Travel End Date</th>
+            <th class="table-heading">Do You Want to Join?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          {% for trip in others_trip_listing %}
+            <td class="table-data">{{ trip.creator }}</td>
+            <td class="table-data"><a href="/travels/destination/{{ trip.id }}">{{ trip.destination }}</a></td>
+            <td class="table-data">{{ trip.travel_from }}</td>
+            <td class="table-data">{{ trip.travel_to }}</td>
+            <td class="table-data"><a id="remove" href="/travels/add_to_plan/{{ trip.id }}">Join</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+
+      <form id="registration-form" action='/travels/add'>
+        <input id="submit-button2" type="submit" value="Add Travel Plan">
+      </form>
+
+      <p id="div-header">Created by Calvin Nguyen</p>
+
+
+
+
+    </div>
+
+	</body>
+</html>

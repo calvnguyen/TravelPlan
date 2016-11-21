@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+      <meta charset="UTF-8">
+      <title>Add Plan</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'travelplan/css/travelplan.css' %}"media="screen" title="no title"  charset="utf-8">
+
+  </head>
+  <body>
+    <h1 id="title-text">Travel Plan's Trip Addition</h1>
+    <form action='/logout'>
+        <input id="submit-button" type="submit" value="Logout">
+      </form>
+    <form id="registration-form" action='/listing'>
+        <input id="submit-button" type="submit" value="Home">
+      </form>
+
+    <div id="main-container">
+      <h3 id="div-header">Add a new Trip:</h3>
+      <form action="/travels/add" method='post'>
+        {% csrf_token %}
+<!--          <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'new-item-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul> -->
+        <label class="form-label">
+          Destination: <input id="name-text" type="text" name="destination" placeholder="Enter A Destination">
+        </label>
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'destination-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+        <label class="form-label">
+          Description: <input id="name-text" type="text" name="description" placeholder="Enter A Description">
+        </label>
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'description-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+        <label class="form-label">
+          Travel Date From: <input id="name-text" type="date" name="travelfrom" placeholder="Enter A Start Date">
+        </label>
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'travel-from-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+
+        <label class="form-label">
+          Travel Date To: <input id="name-text" type="date" name="travelto" placeholder="Enter An End Date">
+        </label>
+
+        <ul class="validation-error">
+          {% for message in messages %}
+            {% if 'travel-to-error' in message.tags %}<li id="validation-text">{{ message }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+
+        <input id="submit-button" type="submit" value="Add">
+      </form>
+
+
+
+      
+    </div>
+
+
+	</body>
+</html>

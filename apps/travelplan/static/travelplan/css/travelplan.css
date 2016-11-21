@@ -1,0 +1,348 @@
+/*CSS reset settings here*/
+*{
+ 	margin: 0px;
+ 	padding: 0px;
+}
+#header-text{
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+	color: #0D4F8B;
+	margin-left: 20px;
+	font-size: 15pt;
+	text-align: left;
+	margin-top: 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#form-container{
+	border: 1px solid black;
+	margin: 0px auto;
+	height: auto;
+	width: 440px;
+	padding-top: 20px;
+	padding-left: 20px;
+	background-color: white;
+	color: black;
+	font-family: verdana, arial, sans-serif;
+	border-radius: 12px;
+	padding-bottom: 10px;
+}
+
+#top-section{
+	border-bottom: 2px solid black;
+	width: auto;
+	height: 40px;
+	margin-bottom: 20px;
+
+}
+
+#login-container{
+	border: 1px solid black;
+	margin: 0px auto;
+	height: auto;
+	width: 440px;
+	padding-top: 30px;
+	background-color: white;
+	color: black;
+	font-family: verdana, arial, sans-serif;
+	border-radius: 12px;
+	padding-bottom: 20px;
+}
+
+
+#submit-button{
+	position: relative;
+	left: 90px;
+	width: 100px;
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	background-color: #1495ce;
+	color: white;
+	margin-top: 10px;
+}
+
+.form-label{
+	display: block;
+	margin-top: 5px;
+	margin: 10px;
+	padding: 5px;
+	font-size: 10pt;
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+}
+
+#wish-table{
+	padding: 10px;
+	margin-right: 10px;
+}
+
+
+#small-text{
+	font-size: 11px;
+	margin-right: 20px;
+}
+
+#name-text{
+	font-family: verdana, arial, sans-serif;
+	width: 200px;
+}
+
+#title-text{
+	font-family: verdana, arial, sans-serif;
+	font-size: 25pt;
+	color: #0D4F8B;
+}
+
+#validation-text{
+	color: red;
+    margin-left: 10px;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: verdana, arial, sans-serif;
+}
+
+
+.validation-error{
+	margin-left: 10px;
+	width: 250px;
+	height: auto;
+	list-style-type: none;
+}
+
+#validation-success{
+	margin-left: 10px;
+	margin-top: 10px;
+	border: 1px solid black;
+	background-color: green;
+	width: 280px;
+	height: auto;
+	list-style-type: none;
+
+}
+
+#result-container{
+	margin: 0px auto;
+	height: auto;
+	width: 600px;
+	padding-top: 10px;
+	background-color: white;
+	color: black;
+	font-family: verdana, arial, sans-serif;
+}
+
+#result-text{
+	font-family: verdana, arial, sans-serif;
+	color: #0276FD;
+	display: inline-block;
+	font-weight: bold;
+}
+
+#submit-button2{
+	position: relative;
+	left: 620px;
+	width: 160px;
+	height: 40px;
+	font-family: verdana, arial, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	background-color: #17c762;
+	color: white;
+
+}
+
+#submit-button3{
+
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	background-color: #1495ce;
+	color: white;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	width: 80px;
+}
+
+#message-button{
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	background-color: #1495ce;
+	color: white;
+	margin-bottom: 30px;
+	width: 130px;
+	height: 30px;
+	margin-left: 570px;
+	border: 2px solid black;
+}
+
+.comment-button{
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	background-color: #17c762;
+	color: white;;
+	margin-bottom: 30px;
+	width: 130px;
+	height: 30px;
+	margin-left: 570px;
+	border: 2px solid black;
+}
+
+.delete-button{
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	background-color: #DB2929;
+	color: white;;
+	width: 60px;
+	height: 20px;
+	border: 2px solid black;
+	font-size: 9pt;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+
+
+.text-label{
+	display: block;
+	margin-top: 5px;
+	margin: 10px;
+	padding: 5px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: : 10pt;
+}
+
+#div-header{
+	font-size: 12pt;
+	font-family: verdana, arial, sans-serif;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+#div-header2{
+	font-size: 12pt;
+	font-family: verdana, arial, sans-serif;
+	margin-top: 30px;
+	margin-left: 10px;
+	color: #0D4F8B;
+	font-weight: bold;
+}
+
+#post-message{
+	font-size: 12pt;
+}
+
+
+#user-name{
+	color: yellow;
+}
+
+.table-heading{
+	padding-right: 10px;
+	border: 2px solid black;
+	width: auto;
+}
+
+.table-data{
+	padding: 5px;
+	border: 1px solid black;
+	width: auto;
+	/*white-space: nowrap;*/
+}
+
+#table-data2{
+	white-space: nowrap;
+	border: 1px solid black;
+	padding: 5px;
+
+}
+
+#new-user{
+	font-size: 8pt;
+	margin-left: 10px;
+}
+
+#user-exist{
+	font-size: 8pt;
+	margin-left: 10px;
+	text-align: center;
+	position: relative;
+	bottom: 5px;
+	left: 100px;
+
+}
+
+#log-out{
+	font-size: 10pt;
+	float: right;
+	margin-left: 10px;
+	margin-right: 40px;
+	margin-top: 10px;
+	font-family: verdana, arial, sans-serif;
+	
+}
+
+#message-box{
+	width: 700px;
+	height: 100px;
+	border-radius: 8px;
+	font-size: 11pt;
+}
+
+#comment-box{
+	width: 670px;
+	height: 100px;
+	border-radius: 8px;
+	margin-left: 30px;
+	font-size: 11pt;
+}
+
+
+.message-container-text{
+	font-family: verdana, arial, sans-serif;
+	font-size: 11pt;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+.message-container-user-text{
+	font-family: verdana, arial, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #1464F4;
+	margin-bottom: 10px;
+
+}
+
+.comment-container-text{
+	font-family: verdana, arial, sans-serif;
+	font-size: 11pt;
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+
+.comment-container-user-text{
+	font-family: verdana, arial, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #228B22;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+
+.btn-info {
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-bottom: 20px;
+}
+
+#userlist{
+	margin-top: 30px;
+	margin-left: 20px;
+	color: green;
+	font-weight: bold;
+}
+
+.page-font{
+	font-family: verdana, arial, sans-serif;
+}
